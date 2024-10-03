@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_trip/screens/passenger_information_screen.dart';
+import 'package:ui_trip/screens/version_screen.dart';
 import 'package:ui_trip/widgets/profile_app_bar.dart';
 import 'package:ui_trip/widgets/reset_email.dart';
 
@@ -78,10 +79,20 @@ class ProfileScreen extends StatelessWidget {
                     trailing: Icon(Icons.chevron_right),
                   ),
                   const Divider(),
-                  const ListTile(
-                    leading: Icon(Icons.info),
-                    title: Text('Version'),
-                    trailing: Text('5.8.2.31'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const VersionScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(Icons.info),
+                      title: Text('Version'),
+                      trailing: Text('5.8.2.31'),
+                    ),
                   ),
                   const Divider(),
                   ListTile(

@@ -58,7 +58,7 @@ class _TrainSearchCardState extends State<TrainSearchCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildLocationField("Mianyang", "绵阳"),
-                const Icon(Icons.directions_train_outlined),
+                const Icon(Icons.rotate_right_outlined),
                 _buildLocationField("Chengdu", "成都"),
               ],
             ),

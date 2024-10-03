@@ -36,6 +36,7 @@ class _ResetEmailState extends State<ResetEmail> {
                   label: Text('please enter your email'),
                 ),
               ),
+              const SizedBox(height: 15),
               // password field goes here...
               TextField(
                 controller: _passwordController,
