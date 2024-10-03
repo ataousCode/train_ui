@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_trip/screens/passenger_information_screen.dart';
 import 'package:ui_trip/screens/version_screen.dart';
+import 'package:ui_trip/widgets/change_password_textfield.dart';
 import 'package:ui_trip/widgets/profile_app_bar.dart';
 import 'package:ui_trip/widgets/reset_email.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -107,10 +108,20 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   const Divider(),
-                  const ListTile(
-                    leading: Icon(Icons.lock),
-                    title: Text('Change password'),
-                    trailing: Icon(Icons.chevron_right),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ChangePasswordTextfield(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(Icons.lock),
+                      title: Text('Change password'),
+                      trailing: Icon(Icons.chevron_right),
+                    ),
                   ),
                   const Divider(),
                   //ShowCallBottomSheet(),
