@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Train Booking App',
-      initialRoute: '/login',
+      initialRoute: '/main',
       routes: routes,
     );
   }

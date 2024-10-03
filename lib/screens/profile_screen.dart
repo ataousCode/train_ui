@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:ui_trip/screens/passenger_information_screen.dart';
 import 'package:ui_trip/widgets/profile_app_bar.dart';
+import 'package:ui_trip/widgets/reset_email.dart';
 
 import '../service/auth_service.dart';
 import '../widgets/show_dialogs.dart';
@@ -32,15 +33,36 @@ class ProfileScreen extends StatelessWidget {
               child: ListView(
                 padding: const EdgeInsets.all(8),
                 children: [
-                  const ListTile(
-                    leading: Icon(Icons.email),
-                    title: Text('My email'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ResetEmail(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(Icons.email),
+                      title: Text('My email'),
+                    ),
                   ),
                   const Divider(),
-                  const ListTile(
-                    leading: Icon(Icons.people),
-                    title: Text('Passenger'),
-                    trailing: Icon(Icons.chevron_right),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const PassengerInformationScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(Icons.people),
+                      title: Text('Passenger'),
+                      trailing: Icon(Icons.chevron_right),
+                    ),
                   ),
                   const Divider(),
                   const ListTile(

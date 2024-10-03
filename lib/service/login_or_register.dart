@@ -23,7 +23,7 @@ class _LoginOrRegisterState extends State<LoginOrRegister> {
     if (showAuthPage) {
       return const Login();
     } else {
-      return Registration();
+      return const Registration();
     }
   }
 }

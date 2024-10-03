@@ -4,6 +4,7 @@ import 'package:ui_trip/screens/profile_screen.dart';
 import 'package:ui_trip/screens/train_booking_screen.dart';
 
 class MainPage extends StatefulWidget {
+
   const MainPage({super.key});
 
   @override
