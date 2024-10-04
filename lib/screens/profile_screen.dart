@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_trip/screens/passenger_information_screen.dart';
+import 'package:ui_trip/screens/settings_screen.dart';
 import 'package:ui_trip/screens/version_screen.dart';
 import 'package:ui_trip/widgets/change_password_textfield.dart';
 import 'package:ui_trip/widgets/profile_app_bar.dart';
@@ -133,6 +134,22 @@ class ProfileScreen extends StatelessWidget {
                       leading: Icon(Icons.phone),
                       title: Text('Mobile number'),
                       subtitle: Text('24/7'),
+                      trailing: Icon(Icons.chevron_right),
+                    ),
+                  ),
+                  const Divider(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SettingsScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      title: Text('Settings'),
+                      leading: Icon(Icons.settings),
                       trailing: Icon(Icons.chevron_right),
                     ),
                   ),

@@ -8,11 +8,11 @@ class ProfileAppBar extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 178,
+          height: 170,
           color: Colors.blue.shade700,
           child: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: [
                   const CircleAvatar(
@@ -68,18 +68,41 @@ class ProfileAppBar extends StatelessWidget {
                   ),
                   const Spacer(),
 
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 120),
-                    child: IconButton(
-                      icon: const Icon(Icons.settings, color: Colors.white),
-                      onPressed: () {},
-                    ),
-                  )
+                  // Padding(
+                  //   padding: const EdgeInsets.only(bottom: 120),
+                  //   child:
+                  // IconButton(
+                  //   icon: const Icon(Icons.settings, color: Colors.white),
+                  //   onPressed: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => SettingsScreen(),
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
+                  //)
                 ],
               ),
             ),
           ),
         ),
+        // Positioned(
+        //   bottom: 70,
+        //   right: 22,
+        //   child: IconButton(
+        //     icon: Icon(Icons.settings, color: Colors.white),
+        //     onPressed: () {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => SettingsScreen(),
+        //         ),
+        //       );
+        //     },
+        //   ),
+        // ),
       ],
     );
   }
